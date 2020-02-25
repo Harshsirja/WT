@@ -1,0 +1,53 @@
+WT Assignment List
+
+Assignment 1
+
+DONE 1. Formatting Tag	
+DONE 2. Various Table Layout
+DONE 3. Write the HTML code to show each letter of a word with new color giving a rainbow effect.
+
+Assignment 2
+
+DONE 1. Design Login Page, Page must have fields in page username, password, remember me and Login button.
+DONE 2. Design student registration page(New Semester) in HTML.
+DONE 3. Write a form to collect details of a user such as name, address, radio button to choose a subject of book user want to buy, dropdown to choose favorite author and comments for the last book user read.
+DONE 4. Design a simple form to register for the new users including username, password, email, mobile number, gender, and hobbies.
+
+Assignment 3
+
+DONE 1. Show the use of frameset and iframe with its attributes. 
+DONE 2. Show how can following be achieved with the help of metadata?
+a)    Stop the page from being listed
+b)    Set an expiration date
+c)    Stop the browser from caching a page
+d)    Give a context for the date so that it can take format MM-DD-YYYY and DD-MM-YYYY
+e)    What is the meaning of the following :
+i)  <meta name=”robots” content=”noindex,nofollow” />
+ii) <meta http-equiv=”pragma” content=”no-cache” />
+DONE 3. Build the resume as per user requirement.
+
+Assignment 4
+
+DONE 1. Study and Implement different types of Style Sheet with all properties and their values.
+DONE 2. Build a GMAIL Signup page using HTML, CSS.
+
+Assignment 5
+
+DONE 1. Write down HTML/CSS code to create table with 5 rows and 3 columns. Even no. of rows display in green color and odd no. of rows display in yellow color.
+DONE 2. Write the following styles in separate CSS file and also show how to link this CSS file in HTML file and show use of styles
+	a)The headings should have normal font style and font’s size should be 120%
+	b)Define a class arial for paragraph which defines font family arial and font style bold.
+	c)Apply a background color yellow and apply a background image “browntile.jpg”
+DONE 3. Specify the CSS to provide; link: after visited blue color and before visited red color, table with odd rows white and even rows blue color.
+DONE 4. Write   cascading   style   sheet   to   get   following   formatting   for   the paragraph.
+Text color-green
+Text-indentation – 2 cm
+Font-courier
+Font style-italic
+Text case-uppercase
+DONE 5. Write HTML and CSS code for the following: 
+(i) Set color of visited link to "green".
+(ii) Set background color of paragraph to “yellow”
+(iii) Set list style for unordered lists to "square".
+(iv) Set "calendar.jpeg" as the repeated background image of the page.
+DONE 6. Template Layout(Calendar)
