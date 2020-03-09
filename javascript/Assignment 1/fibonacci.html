@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3(1)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var N=prompt("Enter Value of N");
+		var a=0;
+		var b=1;
+		var c;
+		if(N==0)
+		{
+			document.write("<h1>No Term</h1>");	
+		}
+		else if(N==1)
+			document.write("<h1>" + a + "</h1>");
+		else
+		{
+			document.write("<h1>" + a + "," + b );
+			for(var i=0;i<N-2;i++)
+			{
+				document.write(",");
+				c=a+b;
+				a=b;
+				b=c;
+				document.write(c);
+			}
+			document.write("." + "</h1>");
+		}	
+	</script>
+</body>
+</html>

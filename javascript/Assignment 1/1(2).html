@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1(2)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var current_date_object = new Date();
+		var current_date = current_date_object.getDate();
+		var current_month = current_date_object.getMonth();
+
+		var current_year =current_date_object.getFullYear();
+
+
+		var b_date=prompt("Date ");
+		var b_month=prompt("Month ");
+
+		current_month+=1;
+
+		current_date_object = new Date(current_month +"/" + current_date + "/" + current_year);
+		if(b_date<=9)
+			b_date="0"+b_date;
+		if(b_month<=9)
+			b_month="0"+b_month;
+
+		var b = b_month+"/"+b_date+"/"+current_date_object.getFullYear();
+		var birth_date = new Date(b.toString());
+		var Difference_In_Time = birth_date.getTime() - current_date_object.getTime();
+		var Difference_In_Days = Difference_In_Time / (1000 * 60 * 60 * 24);
+
+		if(typeof(Difference_In_Days)!="number")
+			Difference_In_Days+=1;
+		document.write("<br>"+Difference_In_Days);
+	</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Validation</title>
+		<script type="text/javascript">
+			function validateForms(){
+				
+				//Username
+				var username = document.getElementById("username").value;
+				if(! (username.charAt(0)=='_' || username.charAt(0))=='@' || (username.charAt(0)>='0' && username.charAt(0)<='9' )){
+					alert("User name should not start with _, @, or any number");
+					return false;
+				}
+				
+				//Password
+				var password = document.getElementById("password").value;
+				var specialcharacter = false;
+				if(password.length>=6 && password.length<=12){
+					for(var i=0;i<password.length;i++){
+						if(! ( ( password.charAt(i)>='a' && password.charAt(i)<='z' ) || (password.charAt(i)>='A' && password.charAt(i)<='Z') || (password.charAt(i)<='0' && password.charAt(i)>='9') ) ){
+							specialcharacter=true;
+						   	break;
+						}
+					}   
+					if(!specialcharacter){
+						alert("Password must conatin at least one special character");
+						return false;
+					}
+				}
+				else{
+					alert("Password length must between 6 to 20 character");
+					return false;
+				}
+				
+				//Phone No.
+				var phno = document.forms["form1"]["phoneno"].value;
+				if(!(phno.charAt(0) == '9' || phno.charAt(0)== '8' )){
+						alert("Phone Number Must start with '9' or '8'");
+						return false;
+				}
+				else {
+					if(phno.length != 10){
+						alert("Phone Number length must be 10 digit");
+						return false;
+					}
+				}
+				
+//				//BirtDate
+//				var birthdate = document.getElementById("birthdate").value;
+//				date=false;
+//				month=false;
+//				year=false;
+//				
+//				if(birthdate.charAt(0)=='0' ){
+//					if((birthdate.charAt(1)>=1 && birthdate.charAt(1)<=9))
+//						date=true;
+//					else if
+//						
+//						
+//				}
+				
+				//Email
+				var s = document.getElementById("email").value;
+				
+				var l=s.length;
+				var charno;
+				var i;
+				var firstpart_length=s.indexOf('@');
+				
+				
+				if (!((s.charAt(0)>='0' && s.charAt(0)<='9') || (s.charAt(0)>='a' && s.charAt(0)<='z')))
+				{
+					alert("Email First character must be digit or in lower case");
+					return false;		
+				}
+				if (!(firstpart_length>=8 && firstpart_length<=20))
+				{
+					alert("Email lenght must be between 8 to 20");
+					return false;
+				}
+				for (i=1;i<firstpart_length;i++) 
+				{
+					if (!((s.charAt(i)>='0' && s.charAt(i)<='9') ||(s.charAt(i)>='a'&&s.charAt(i)<='z')||(s.charAt(i)=='_')||(s.charAt(i)=='.')))
+					{
+						alert("Email Only digit or lower case or @ or _ allow");
+					return false;
+					}
+				}
+				var s2=s.substring((firstpart_length));
+				if(( s2.indexOf('.') - s2.indexOf('@') ) - 1 <=2  )
+				{
+					alert("Email domain name must be greater than 2 character between @ and . symbol");
+					return false;
+				}
+				for (i=s2.indexOf('@')+1;i<s2.indexOf('.') ;i++ )
+				{
+					if (!(s2.charAt(i)>='a' && s2.charAt(i)<='z')) 
+					{
+						alert("after @ symbol all chharacter in lower case");
+						return false;
+					}		
+				}
+				for (i=s2.indexOf('.')+1;i<s2.length();i++) 
+				{
+					if (!(s2.charAt(i)>='a' && s2.charAt(i)<='z')) 
+					{
+						alert("after . symbol all chharacter in lower case");
+						return false;
+					}	
+				}
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form name="form1" method="post" action="" onsubmit="validateForms()">
+			<label>Username</label><br>
+			<input type="text" name="username" id="username" placeholder="Username"/>
+			<br>
+			<br>
+			<label>Password</label><br>
+			<input type="password" name="password" id="password" placeholder="Password"/>
+			<br>
+			<br>
+			<label>Birth Date</label><br>
+			<input type="text" name="birthdate" id="birthdate" placeholder="dd-mm-yyyy"/>
+			<br>
+			<br>
+			<label>Email</label><br>
+			<input type="text" name="email" id="email" placeholder="email123@mail.com"/>
+			<br>
+			<br>			
+			<label>Phone No.</label><br>
+			<input type="text" name="phoneno" id="phoneno"/>
+			<br>
+			<br>
+			<br>
+			<input type="submit" />
+		</form>
+	</body>
+</html>

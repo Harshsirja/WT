@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Number seperation</title>
+	</head>
+	<body>
+		<script>
+			var a=new Array();
+			var n = prompt("Enter two digit Number",10);
+			if(n<=99 && n>=10){
+				var num = 278;
+				var digits = [];
+				while (n > 0) {
+					digits.push(n % 10);
+					n = parseInt(n / 10);
+				}
+				digits.reverse();
+				//document.write(digits);
+				result=1;
+				for(i=1;i<=digits[1];i++){
+					result=result*digits[0];
+				}
+				document.writeln(result);
+			}
+			else{
+				alert("Enter two digit number only");
+			}
+		</script>
+	</body>
+</html>
