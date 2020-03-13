@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>EVENTS</title>
+		<script type="text/javascript">
+			function changeheading_onmouseover(){
+				document.getElementById("heading1").style.color = "red";
+			}
+			function changeheading_onmouseout(){
+				document.getElementById("heading1").style.color = "black";
+			}
+			function getdatetime(){
+				var d = new Date();
+				document.getElementById("datetimetext").innerHTML=d;
+			}
+			function setcolor(){
+				var id =document.getElementById()
+			}
+			function demo(event){
+				if(event.which==1){
+					alert("Left Click");
+				}
+				else if(event.which==2){
+					alert("Middle Mouse Button");
+				}
+				else if(event.which==3){
+					alert("Right Click")
+				}
+			}
+			function keycode(key){
+				
+				var small_key=key.toLowerCase();
+				if(small_key=='a'||small_key=='e'||small_key=='i'||small_key=='o'||small_key=='u')
+					alert("you entered a vowel");
+				else
+					alert(key);	
+			}
+		</script>
+	</head>
+	<body onkeypress="keycode(window.event.key)" onkeydown="document.bgColor='blue'">
+		<h1 id="heading1" onmouseover="changeheading_onmouseover()" onmouseout="changeheading_onmouseout()">Heading</h1>
+		<button type="button" onclick="getdatetime()">Button</button>
+		<p id="datetimetext"></p>
+		<button type="button" onclick="document.bgColor='orange'" >Orange</button>
+		<button type="button" onclick="document.bgColor='red'">Red</button><br>
+		<br>
+		<button type="button" onmousedown="demo(event)">Check mouse Button Click</button>
+	</body>
+</html>
